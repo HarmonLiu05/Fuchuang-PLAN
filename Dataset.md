@@ -22,5 +22,5 @@ Validation data contains AgeDB_30, CALFW, CPLFW, and LFW datasets.
 
 数据集下载地址。
 
-暂时可以只是用照片数最少的CASIA作为训练集 验证集合使用AgeDB和LFW
+暂时可以只是用照片数最少的CASIA作为训练集 拿最后训练集跑出来的权重进行测试集：验证集使用AgeDB和LFW
 
