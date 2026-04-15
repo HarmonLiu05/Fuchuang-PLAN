@@ -26,6 +26,9 @@
 
 [Dataset.md](Dataset.md)
 
+##待确认参考资料
+
+[swimface](https://github.com/lxq1000/SwinFace?tab=readme-ov-file)
 
 # 模型架构：
 
