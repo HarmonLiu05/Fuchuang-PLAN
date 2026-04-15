@@ -60,7 +60,8 @@
 1. 汇总分析
 
 先尝试Adaface Arcface
-liu：目前我正在尝试将swimv1-tiny+adaface损失 在训练集上跑30个epoch做预训练 然后在agedb-30验证任务上跑验证正确率指标 （尝试中） 
+
+**liu**：目前我正在尝试将swimv1-tiny+adaface损失 在训练集上跑30个epoch做预训练 然后在agedb-30验证任务上跑验证正确率指标 （尝试中） 
 
 训练数据集使用 [Dataset.md](Dataset.md)
 
