@@ -1,10 +1,12 @@
 # 目前计划进展
 **liu**：目前我正在尝试将swim-small，adaface分类头 在训练集上跑30个epoch做预训练 然后在agedb-30验证任务上跑验证正确率指标 （尝试中） 
 [参考timm的swim-s架构来源](https://huggingface.co/timm/swin_small_patch4_window7_224.ms_in22k_ft_in1k/tree/main)
+
 [参考Adaface官方仓库](https://github.com/mk-minchul/CVLface)
 
 **zhou**:目前正在探究通用预训练权重和人脸数据集预训练权重 在同一架构下性能的差异，swim-small，adaface分类头 （尝试中）
-[参考timm的swim-s架构来源](https://huggingface.co/timm/swin_small_patch4_window7_224.ms_in22k_ft_in1k/tree/main)
+[参考timm的swim-s架构来源](https://huggingface.co/timm/swin_small_patch4_window7_224.ms_in22k_ft_in1k/tree/main)   
+
 [参考Adaface官方仓库](https://github.com/mk-minchul/CVLface)
 
 
@@ -12,6 +14,15 @@
 待填充........
 
 
+## 参考资料
+
+验证评估协议说明：
+
+[AGE-DB评估协议说明.md](AGE-DB评估协议说明.md)
+
+训练数据集和验证集（跨数据集的验证）的下载地址：
+
+[Dataset.md](Dataset.md)
 
 
 # 模型架构：
@@ -50,20 +61,10 @@
 1. 记录训练配置如epoch记录评估输出的准确率
 1. 汇总分析
 
-## 参考资料
-
-验证评估协议说明：
-
-[AGE-DB评估协议说明.md](AGE-DB评估协议说明.md)
-
-训练数据集和验证集（跨数据集的验证）的下载地址：
-
-[Dataset.md](Dataset.md)
 
 # 当前SOTA：
 
 ![image-20260415145943978](image-20260415145943978.png)
-训练数据集使用 [Dataset.md](Dataset.md)
 
 # 自定义评估协议........开发中
 
