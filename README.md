@@ -1,34 +1,26 @@
-# 模型训练计划
+# 目前计划进展
+**liu**：目前我正在尝试将swimv1-tiny+adaface损失 在训练集上跑30个epoch做预训练 然后在agedb-30验证任务上跑验证正确率指标 （尝试中） 
+[参考微软官方实现架构](https://github.com/microsoft/Swin-Transformer)正在改成[参考timm架构来源](https://huggingface.co/timm/swin_small_patch4_window7_224.ms_in22k_ft_in1k/tree/main)
+[参考Adaface官方仓库](https://github.com/mk-minchul/CVLface)
 
-## 参考资料
+**zhou**:目前正在探究通用预训练权重和人脸数据集预训练权重 在同一架构下性能的差异，swim-small，adaface分类头 （尝试中）
+[参考timm架构来源](https://huggingface.co/timm/swin_small_patch4_window7_224.ms_in22k_ft_in1k/tree/main)
+[参考Adaface官方仓库](https://github.com/mk-minchul/CVLface)
 
-评估协议说明：
 
-[AGE-DB评估协议说明.md](AGE-DB评估协议说明.md)
+# 已有结果：
+待填充........
 
-数据集下载地址：
 
-[Dataset.md](Dataset.md)
 
-# 当前SOTA：
 
-![image-20260415145943978](image-20260415145943978.png)
-
-# 模型训练计划：
+# 模型架构：
 
 ## 命题组要求：只能使用通用预训练权重，以及不能使用成熟的人脸识别模型。
 
-### 1.要用CNN只能使用Resnet-50，使用imgnet预训练权重（加快收敛）
+### 1.使用基于Transformer架构的模型
 
-可以模仿IR（对人脸进行改进的Resnet）要对原生Resnet进行魔改-难度大 但是在架构上创新 IR官方仓库：https://github.com/deepinsight/insightface，
-
-但是你魔改之后原来预训练的权重就失效了 因为你的模型架构变化 权重全部失效了 或是根本加载不进去
-
-### 2.使用基于Transformer架构的模型
-
-#### 如Vit，swim-transformer
-
-#### 最好使用swim-transformer，shift-window偏移窗口注意力机制，对细粒度的识别优于vit 目前主要方向就是弄这个。
+#### swim-transformer
 
 下面是官方架构图
 
@@ -36,7 +28,7 @@
 
 ![Swin-Transformer架构图2](image-20260415151350867.png)
 
-官方仓库：https://github.com/microsoft/Swin-Transformer
+[官方仓库]：[https://github.com/microsoft/Swin-Transformer]
 
 # 可分工的实验验证（动手跑实验）：
 
@@ -50,7 +42,6 @@
 
 [官方仓库](https://github.com/mk-minchul/CVLface)
 
-然后基于一个效果最好的单一损失函数进行下一步的时间损失函数的设计。
 
 **实验设计**：
 
@@ -59,18 +50,25 @@
 1. 记录训练配置如epoch记录评估输出的准确率
 1. 汇总分析
 
-先尝试Adaface Arcface
+## 参考资料
 
-**liu**：目前我正在尝试将swimv1-tiny+adaface损失 在训练集上跑30个epoch做预训练 然后在agedb-30验证任务上跑验证正确率指标 （尝试中） 
-
-训练数据集使用 [Dataset.md](Dataset.md)
-
-测试验证协议评估协议说明：
-
-优秀论文中最常见的评估协议细节说明：
+验证评估协议说明：
 
 [AGE-DB评估协议说明.md](AGE-DB评估协议说明.md)
 
+训练数据集和验证集（跨数据集的验证）的下载地址：
+
+[Dataset.md](Dataset.md)
+
+# 当前SOTA：
+
+![image-20260415145943978](image-20260415145943978.png)
+训练数据集使用 [Dataset.md](Dataset.md)
+
 # 自定义评估协议........开发中
 
-qwen --resume 839f2302-7de5-4bc1-bb67-f5509a682909
+### 1.要用CNN只能使用Resnet-50，使用imgnet预训练权重（加快收敛）
+
+可以模仿IR（对人脸进行改进的Resnet）要对原生Resnet进行魔改-难度大 但是在架构上创新 IR官方仓库：https://github.com/deepinsight/insightface，
+
+但是你魔改之后原来预训练的权重就失效了 因为你的模型架构变化 权重全部失效了 或是根本加载不进去
