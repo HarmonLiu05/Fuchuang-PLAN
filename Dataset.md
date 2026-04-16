@@ -1,4 +1,24 @@
-## Dataset
+### 已经经过裁剪对齐之后的数据集224*224 符合imgnet预训练权重的图片输入大小 
+
+#### 训练集：
+
+[**AgeDB**](https://huggingface.co/datasets/lhx05/agedb-224-by-identity)
+
+图片总数：16488
+
+[**Webface**](https://huggingface.co/datasets/lhx05/WebFace224)
+
+图片总数：490623
+
+#### 验证集：
+
+[**除了FGnet的汇总**](https://huggingface.co/datasets/lhx05/lab1-resized-face-datasets)
+
+[**FGnet**](https://huggingface.co/datasets/lhx05/fgnet-age30-protocol) 
+
+图片数：1002
+
+## kaggle原版112大小Dataset
 
 You can download aligned and cropped (112x112) training and validation datasets from Kaggle.
 

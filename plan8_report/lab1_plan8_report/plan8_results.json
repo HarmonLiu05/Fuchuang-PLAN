@@ -1,0 +1,32 @@
+{
+  "webface_full_1epoch": {
+    "checkpoint": "/root/Lab1/experiments/finetune_backbone_1epoch_bs128_amp/checkpoints/best.pt",
+    "method": "Full backbone fine-tune, not LoRA",
+    "train_dataset": "WebFace-224",
+    "train_images": 490623,
+    "classes": 10572,
+    "epochs": 1,
+    "batch_size": 128,
+    "fgnet_age30_acc": 61.8118572292801,
+    "fgnet_age30_std": 4.725344134795952,
+    "agedb_30_acc": 77.45,
+    "agedb_30_std": 1.8679311193581702
+  },
+  "agedb567_lora_r4": {
+    "checkpoint_latest": "/root/Lab1/experiments/agedb567_lora_r4_epochlog/checkpoints/latest.pt",
+    "checkpoint_best": "/root/Lab1/experiments/agedb567_lora_r4_epochlog/checkpoints/best.pt",
+    "method": "LoRA qkv r=4 alpha=4 + AdaFace head",
+    "train_dataset": "AgeDB-567 224 by identity",
+    "train_images": 16488,
+    "classes": 567,
+    "epochs": 20,
+    "batch_size": 128,
+    "fgnet_age30_best_acc": 53.832426,
+    "fgnet_age30_best_epoch": 5,
+    "fgnet_age30_final_acc": 51.400484,
+    "agedb_30_best_checkpoint_acc": 65.68333333333334,
+    "agedb_30_best_checkpoint_std": 1.4915502747886933,
+    "agedb_30_latest_checkpoint_acc": 68.0,
+    "agedb_30_latest_checkpoint_std": 1.4719601443879762
+  }
+}
