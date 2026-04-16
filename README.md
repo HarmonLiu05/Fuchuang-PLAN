@@ -1,7 +1,7 @@
 # 目前计划进展
 **liu**：目前我正在尝试将swim-small，adaface分类头 打算agedb作为训练集合 
 
-[目前进度]( plan8_report/lab1_plan8_report\实验报告概览.md ) 
+[目前进度](plan8_report/lab1_plan8_report/实验报告概览.md)
 
 [参考timm的swim-s架构来源](https://huggingface.co/timm/swin_small_patch4_window7_224.ms_in22k_ft_in1k/tree/main)
 
