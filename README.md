@@ -1,5 +1,5 @@
 # 目前计划进展
-**liu**：目前我正在尝试将swim-small，adaface分类头 打算agedb作为训练集合 
+**liu**：目前我正在尝试将swim-small，adaface分类头 打算agedb作为训练集 在FGnet上跑到80%正确率
 
 [目前进度](plan8_report/lab1_plan8_report/实验报告概览.md)
 
